@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class VersionController {
     @GetMapping("/version")
     public String getVersion() {
-        return "3.0";
+        return "4.0";
     }
 }
