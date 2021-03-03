@@ -5,7 +5,7 @@ pipeline {
    stage('Clean') {
         steps {
           echo 'Cleaning...'
-          mvn clean
+          sh 'mvn clean verify'
 		 }
 		  
     }
