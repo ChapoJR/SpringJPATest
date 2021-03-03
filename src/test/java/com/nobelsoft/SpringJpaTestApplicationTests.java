@@ -16,7 +16,6 @@ import java.util.Arrays;
 import java.util.Optional;
 
 @SpringBootTest
-@CucumberContextConfiguration
 @Slf4j
 class SpringJpaTestApplicationTests {
 
@@ -25,6 +24,18 @@ class SpringJpaTestApplicationTests {
 
     @Test
     void contextLoads() {
+    }
+
+    public <X> void prueba(X test) {
+        System.out.println(test);
+    }
+
+    @Test
+    @DisplayName("Generic")
+    void testGeneric() {
+        prueba("1");
+        prueba(1);
+        prueba(null);
     }
 
     @Test

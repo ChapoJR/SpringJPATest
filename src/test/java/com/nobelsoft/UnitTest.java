@@ -11,11 +11,12 @@ import static org.mockito.Mockito.*;
 
 @SpringBootTest
 public class UnitTest {
+
     @MockBean
     RestTemplate template;
 
     @Test
-    public void testTemplate(){
+    public void testTemplate() {
         when(template.getForEntity(any(String.class), any(Class.class))).thenReturn(new ResponseEntity(new Object(), HttpStatus.OK));
     }
 }
